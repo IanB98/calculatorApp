@@ -1,0 +1,10 @@
+<h1>Add</h1>
+<hr>
+<h2><%= @add1%> + <%= @add2%> = <%= @result%></h2>
+<hr>
+<%= @num1 %>
+<%= @num2 %>
+<%= form_with url: "/add", method: :get do |form| %>
+<%= form.text_field :num1 %> + <%= form.text_field :num2 %>
+<%= form.submit "Add" %>
+<% end %>
