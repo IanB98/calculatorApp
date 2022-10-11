@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  get '/calculate', :controller=>'calculator', :action=>'calculate'
+  get '/calculateButton', :controller=>'calculator', :action=>'calculateButton'
 
-  get '/add', :controller=>'calculator', :action=>'calculate2'
+  get '/calculateDropdown', :controller=>'calculator', :action=>'calculateDropdown'
 end
