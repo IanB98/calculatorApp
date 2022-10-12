@@ -1,3 +1,10 @@
 <h1>Calculator</h1>
 <hr>
-<%= form_with url: "/calculateButton", method: :get do |form| %>
+<%= @num1 %><%= @num2 %>
+<%= form_with url: "/calculateDropdown", method: :get do |form| %>
+<%= form.text_field :num1 %> <%= form.text_field :num2 %>
+<%= form.select :operator, options_for_select([["Add", "Add"], ["Subtract", "Subtract"],["Multiply","Multiply"],["Divide","Divide"]]) %>
+<%= form.submit "Calculate"%>
+<% end %>
+<hr>
+<h3>Answer = <%= @result%></h3>

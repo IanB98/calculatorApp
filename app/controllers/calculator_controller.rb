@@ -23,19 +23,19 @@ class CalculatorController < ApplicationController
     end
 
     def calculateDropdown
-        if params[:commit] =='Add'
+        if params[:operator] =='Add'
             @solved1 = params[:num1]
             @solved2 = params[:num2]
             @result = ArithmeticCalculator.add(@solved1.to_i,@solved2.to_i)
-        elsif params[:commit]=='Subtract'
+        elsif params[:operator]=='Subtract'
             @solved1 = params[:num1]
             @solved2 = params[:num2]
             @result = ArithmeticCalculator.subtract(@solved1.to_i,@solved2.to_i)
-        elsif params[:commit]=='Multiply'
+        elsif params[:operator]=='Multiply'
             @solved1 = params[:num1]
             @solved2 = params[:num2]
             @result = ArithmeticCalculator.multiply(@solved1.to_i,@solved2.to_i)
-        elsif params[:commit]=='Divide'
+        elsif params[:operator]=='Divide'
             @solved1 = params[:num1]
             @solved2 = params[:num2]
             @result = ArithmeticCalculator.divide(@solved1.to_i,@solved2.to_i)
